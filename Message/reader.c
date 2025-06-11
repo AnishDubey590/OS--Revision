@@ -16,7 +16,7 @@ int main() {
     msg_id = msgget(my_key, 0666 | IPC_CREAT);        // Access message queue
 
     // Receive message of type 120
-    msgrcv(msg_id, &message, sizeof(message.msg), 120, 0);  
+    msgrcv(msg_id, &message, sizeof(message.msg), 120, 0);
 
     printf("Received Message is: %s\n", message.msg);
 
