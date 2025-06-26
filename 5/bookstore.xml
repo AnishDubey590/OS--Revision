@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book>
+    <title>Demons</title>
+    <author>Fyodor Dostoevsky</author>
+    <price>13.00</price>
+  </book>
+  <book>
+    <title>Amerika</title>
+    <author>Franz Kafka</author>
+    <price>14.00</price>
+  </book>
+</bookstore>
