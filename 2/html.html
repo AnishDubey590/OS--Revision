@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>form</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<body>
+<h2>create user account</h2>
+<form onsubmit="return validateform()">
+<label>Email id:</label>
+<input type="text" id="email">
+<div class="error" id="emailerror"></div>
+<label>Password:</label>
+<input type="password" id="password">
+<div class="error" id="passerror"></div>
+<label>Confirm Password:</label>
+<input type="password" id="confpass">
+<div class="error" id="confpasserr"></div>
+<label>DOB:</label>
+<input type="date" id="dob">
+<div class="error" id="doberr"></div>
+<button type="submit">Register</button>
+</form>
+</body>
+</html>
