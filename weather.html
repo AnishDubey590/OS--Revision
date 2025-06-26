@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Info</title>
+    <style>
+      .label {
+        padding: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <label>Enter The City Name</label>
+    <input type="text" id="city" placeholder="City name">
+    <button onclick="getinfo()">Submit</button>
+
+    <br><label id="temp">Temperature:</label><br>
+    <label id="humid">Humidity:</label>
+
+    <script>
+      const APIKey = '69fb402358c3449120c314202ebb13ac';
+
+      async function getinfo() {
+        const city = document.getElementById('city').value;
+        try {
+          const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`
+          );
+
+          const data = await response.json();
+
+          // Set the content using .innerText, not .setText
+          document.getElementById('temp').innerText = 'Temperature: ' + data.main.temp + ' °C';
+          document.getElementById('humid').innerText = 'Humidity: ' + data.main.humidity + ' %';
+        } catch (error) {
+          document.getElementById('temp').innerText = 'City not found or network error.';
+          document.getElementById('humid').innerText = '';
+        }
+      }
+    </script>
+  </body>
+</html>
